@@ -1,0 +1,590 @@
+/* Tickets Page Specific Styling */
+
+/* Stats Grid for Tickets */
+.stats-grid-tickets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+/* Ticket ID */
+.ticket-id {
+  font-weight: 700;
+  color: #0891b2;
+  font-family: monospace;
+  font-size: 14px;
+  background: linear-gradient(135deg, #cffafe, #a5f3fc);
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  border: 2px solid #06b6d4;
+}
+
+/* Ticket Code Display */
+.ticket-code-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #f3e8ff, #e9d5ff);
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 2px solid #a855f7;
+  box-shadow: 0 3px 10px rgba(168, 85, 247, 0.2);
+}
+
+.ticket-code-display i {
+  font-size: 22px;
+  color: #7c3aed;
+}
+
+.ticket-code {
+  font-family: "Courier New", monospace;
+  font-weight: 700;
+  font-size: 15px;
+  color: #7c3aed;
+  letter-spacing: 1px;
+}
+
+.data-table tbody tr:hover .ticket-code-display {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4);
+  background: linear-gradient(135deg, #a855f7, #9333ea);
+}
+
+.data-table tbody tr:hover .ticket-code-display i,
+.data-table tbody tr:hover .ticket-code {
+  color: white;
+}
+
+/* User Info in Table */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 14px;
+}
+
+.user-email {
+  font-size: 12px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Route Display in Table */
+.route-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.route-origin {
+  color: #1e40af;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  border: 2px solid #3b82f6;
+}
+
+.route-arrow {
+  color: #3b82f6;
+  font-size: 16px;
+  animation: arrowSlide 2s ease-in-out infinite;
+}
+
+@keyframes arrowSlide {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+}
+
+.route-destination {
+  color: #059669;
+  background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  border: 2px solid #10b981;
+}
+
+/* Train Info */
+.train-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.train-name {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 14px;
+}
+
+.train-type {
+  font-size: 12px;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  width: fit-content;
+}
+
+/* Departure Display */
+.departure-display {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.departure-display i {
+  color: #3b82f6;
+  font-size: 14px;
+  margin-right: 6px;
+}
+
+.departure-display > span:first-of-type {
+  font-size: 13px;
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.departure-time {
+  font-size: 12px;
+  color: #6b7280;
+  background: #f3f4f6;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  width: fit-content;
+  font-weight: 600;
+}
+
+/* Passenger Badge */
+.passenger-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  color: #d97706;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 13px;
+  border: 2px solid #fbbf24;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.2);
+  transition: all 0.3s ease;
+}
+
+.passenger-badge i {
+  font-size: 14px;
+}
+
+.data-table tbody tr:hover .passenger-badge {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: white;
+  box-shadow: 0 6px 18px rgba(251, 191, 36, 0.4);
+}
+
+/* Price Display */
+.price-amount {
+  font-weight: 700;
+  color: #059669;
+  font-size: 15px;
+  display: block;
+}
+
+/* Date & Time Display */
+.date-display,
+.time-display {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.date-display i,
+.time-display i {
+  color: #6366f1;
+  font-size: 14px;
+}
+
+/* Alert Success */
+.alert {
+  padding: 18px 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  animation: slideIn 0.5s ease;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.alert-success {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  border-left: 4px solid #10b981;
+  color: #065f46;
+}
+
+.alert i:first-child {
+  font-size: 24px;
+  color: #10b981;
+}
+
+.alert span {
+  flex: 1;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.alert-close {
+  background: none;
+  border: none;
+  color: #065f46;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-close:hover {
+  background: rgba(16, 185, 129, 0.2);
+  transform: rotate(90deg);
+}
+
+/* Search Box */
+.header-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-box i {
+  position: absolute;
+  left: 15px;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.search-box input {
+  padding: 10px 15px 10px 45px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 300px;
+  transition: all 0.3s ease;
+  background: #f9fafb;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-action {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-regen {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  color: #1e40af;
+  border-color: #3b82f6;
+}
+
+.btn-regen:hover {
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  color: white;
+  transform: translateY(-3px) scale(1.1) rotate(180deg);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.btn-delete {
+  background: linear-gradient(135deg, #fee2e2, #fecaca);
+  color: #dc2626;
+  border-color: #ef4444;
+}
+
+.btn-delete:hover {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+}
+
+/* Table Enhancements */
+.data-table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.data-table tbody tr:hover {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  transform: scale(1.01);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
+}
+
+/* Empty State */
+.text-center {
+  text-align: center;
+  padding: 60px 20px !important;
+  color: #9ca3af;
+}
+
+.text-center i {
+  font-size: 48px;
+  margin-bottom: 15px;
+  display: block;
+  color: #d1d5db;
+}
+
+/* Animations */
+.stat-card:hover .stat-icon {
+  animation: iconBounce 0.6s ease;
+}
+
+@keyframes iconBounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2) rotate(5deg);
+  }
+}
+
+/* Hover effects untuk stat cards */
+.stat-card.blue:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+.stat-card.green:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+}
+
+.stat-card.orange:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(251, 191, 36, 0.3);
+}
+
+.stat-card.purple:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.3);
+}
+
+/* Ticket Code Animation */
+@keyframes ticketGlow {
+  0%,
+  100% {
+    box-shadow: 0 3px 10px rgba(168, 85, 247, 0.2);
+  }
+  50% {
+    box-shadow: 0 3px 20px rgba(168, 85, 247, 0.4);
+  }
+}
+
+.ticket-code-display {
+  animation: ticketGlow 3s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .stats-grid-tickets {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-grid-tickets {
+    grid-template-columns: 1fr;
+  }
+
+  .card-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    width: 100%;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .btn-action {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .route-display {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .route-arrow {
+    transform: rotate(90deg);
+    margin: 5px 0;
+  }
+
+  .data-table {
+    font-size: 12px;
+  }
+
+  .user-info,
+  .train-info,
+  .departure-display {
+    gap: 2px;
+  }
+
+  .ticket-code-display {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .sidebar,
+  .topbar,
+  .btn-action,
+  .search-box {
+    display: none !important;
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .data-table {
+    page-break-inside: avoid;
+  }
+
+  .ticket-code-display {
+    background: white !important;
+    border: 2px solid #000;
+  }
+
+  .ticket-code {
+    color: #000 !important;
+  }
+}
+
+/* Special Print View for Tickets */
+@media print {
+  .data-table thead {
+    background: #f3f4f6;
+  }
+
+  .ticket-code-display {
+    page-break-inside: avoid;
+  }
+}
+
+/* Highlight new tickets (issued today) */
+.data-table tbody tr[data-new="true"] {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+}
+
+.data-table tbody tr[data-new="true"]:hover {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+}
+
+/* Loading State */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Success state after regenerate */
+@keyframes successPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.regenerated {
+  animation: successPulse 0.5s ease;
+}
